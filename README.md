@@ -1,2 +1,2 @@
-# previous-c-projects
-Projects completed in COMP211, Spring 2022.
+# personal-website
+Personal website created to explore HTML, CSS, and JS.
