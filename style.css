@@ -1,0 +1,226 @@
+
+html, body {
+    height: 4200px; /* used to enable scrolling, 1 page is around 800 px*/
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(55deg, thistle 0%, papayawhip 51%, pink 85%);
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: flex; /* creates the flex container */
+    flex-direction: column;
+    flex-flow: column wrap; /* creates column structure and causes lines to wrap around */
+    justify-content: center; /* centers the main axis */
+    align-items: center; /* centers the cross axis */
+}
+
+#parent_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "about"
+    "about-info"
+    "current"
+    "current-info"
+    "completed"
+    "completed-info"
+    "reach"
+    "reach-info";
+  align-items: center;
+  justify-items: left;
+  padding-left: 100px;
+}
+
+
+#outer-grid {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 8px;
+
+  align-items: center;
+  justify-items: left;
+  padding-left: 100px;
+}
+
+#outer-grid > div {
+  color: rgb(238, 155, 238);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  font-size: 50px;
+  padding: 8px;
+}
+
+#inner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+#inner-grid > div {
+  color: rgb(238, 155, 238);
+  font-family: Palatino, URW Palladio L, serif;
+  font-size: 30px;
+  padding: 10px;
+  align-items: center;
+}
+
+#about {
+  padding-top: 3em;
+  grid-area: about;
+}
+
+#current {
+  grid-area: current;
+}
+
+#completed {
+  grid-area: completed;
+}
+
+#reach {
+  grid-area: reach;
+}
+
+#info {
+  color: palevioletred;
+  font-family: Palatino, URW Palladio L, serif;
+  font-size: 20px;
+}
+
+
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+    list-style: none;
+    margin: 0; 
+}
+  
+.navigation a {
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 0.5em;
+    color: rgb(246, 230, 215);
+}
+  
+.navigation a:hover {
+    font-weight: bold;
+    color: plum;
+    cursor: pointer;
+}
+  
+  @media all and (max-width: 800px) {
+    .navigation {
+      justify-content: space-around;
+    }
+  }
+  
+  @media all and (max-width: 600px) {
+    .navigation {
+      flex-flow: column wrap;
+      padding: 0;
+    }
+    .navigation a { 
+      text-align: center; 
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255,0.3); 
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    }
+    .navigation li:last-of-type a {
+      border-bottom: none;
+    }
+  }
+
+
+h1 {
+    text-align: center;
+    color: rgb(238, 155, 238);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+/* a:link, a:visited {
+    text-align: center;
+    color: peachpuff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+
+
+/* .starter {
+    height: 730px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+}
+
+#instarter {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+
+    font-size: 60px;
+    font-weight: 600;
+    color: plum;
+}
+
+.about {
+    margin-left: 160px;
+    margin-right: 0px;
+    margin-top: -250px;
+    margin-bottom: -100px;
+    padding: 0;
+    width: 50%;
+    display: table;
+}
+
+
+.paragraphs {
+    margin-left: 160px;
+    margin-right: 0px;
+    margin-top: -250px;
+    margin-bottom: 0px;
+    padding: 0;
+    width: 100%;
+    display: table;
+}
+
+#inpara {
+    text-align: left;
+    display: table-cell;
+    vertical-align: top;
+    font-size: 30px;
+    font-weight: 600;
+    color: rosybrown;
+}
+
+.abs {
+    position: absolute;
+    top: 1275px;
+    right: 120px;
+}
+
+
+#impnames {
+    text-align: left;
+    display: table-cell;
+    vertical-align: top;
+    font-size: 40px;
+    font-weight: 600;
+    color: rosybrown;
+}
+*/
+
+.links {
+    text-align: center;
+    vertical-align: bottom;
+}
+
+/* img {
+    margin: 30px;
+} */
